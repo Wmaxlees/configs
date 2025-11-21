@@ -1,0 +1,17 @@
+window#waybar {
+    background-color: #151020;
+    font-family: "Intone Mono Nerd Font";
+}
+
+#window {
+    padding-left: 1em;
+}
+
+#memory, #cpu, #battery {
+    background-color: #6A0DAD;
+    color: #08050F;
+}
+#network, #clock {
+    background-color: #08050F;
+    color: #6A0DAD;
+}

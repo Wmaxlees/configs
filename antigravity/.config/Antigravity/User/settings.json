@@ -1,0 +1,43 @@
+{
+    "editor.fontFamily": "'Intone Mono Nerd Font', monospace",
+    "editor.fontSize": 14,
+    "editor.fontLigatures": true,
+    "editor.formatOnSave": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/node_modules": true,
+        "**/__pycache__": true,
+        "**/*.meta": true,
+        "**/dist": true,
+        "**/bazel-**": true,
+        "venv": true,
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "120"
+    ],
+    "[starlark]": {
+        "editor.defaultFormatter": "BazelBuild.vscode-bazel",
+        "editor.formatOnSave": true
+    },
+    "[bazel]": {
+        "editor.defaultFormatter": "BazelBuild.vscode-bazel",
+        "editor.formatOnSave": true
+    },
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/bazel-bin",
+        "${workspaceFolder}/bazel-genfiles",
+    ],
+    "pylint.extraPaths": [
+        "${workspaceFolder}/bazel-bin",
+        "${workspaceFolder}/bazel-genfiles",
+    ],
+    "workbench.colorTheme": "Tokyo Night"
+}

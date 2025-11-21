@@ -1,0 +1,33 @@
+{
+    "layer": "top",
+    "modules-left": ["battery", "memory", "cpu", "sway/window"],
+    "modules-center": ["sway/workspaces"],
+    "modules-right": ["network", "memory", "cpu", "clock"],
+    "sway/window": {
+        "max-length": 50
+    },
+    "memory": {
+        "format": "{percentage}% ",
+        "min-length": 8,
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "min-length": 8,
+    },
+    "network": {
+        "format": "{bandwidthDownBytes}, {bandwidthUpBytes}",
+        "interval": 2,
+        "min-length": 25,
+        "max-length": 25,
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "min-length": 10,
+    },
+    "clock": {
+        "format": "{:%Y-%m-%d %I:%M %p}",
+        "min-length": 25,
+        "max-length": 25,
+    }
+}
