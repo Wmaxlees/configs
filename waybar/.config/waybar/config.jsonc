@@ -1,33 +1,67 @@
 {
     "layer": "top",
-    "modules-left": ["battery", "memory", "cpu", "sway/window"],
-    "modules-center": ["sway/workspaces"],
-    "modules-right": ["network", "memory", "cpu", "clock"],
+    "modules-left": [
+        "clock",
+        "sway/window"
+    ],
+    "modules-center": [
+        "sway/workspaces"
+    ],
+    "modules-right": [
+        "network",
+        "pulseaudio",
+        "battery",
+        "cpu",
+        "memory"
+    ],
     "sway/window": {
         "max-length": 50
     },
     "memory": {
         "format": "{percentage}% ",
-        "min-length": 8,
+        "min-length": 7
     },
     "cpu": {
         "format": "{usage}% ",
-        "min-length": 8,
+        "min-length": 6
     },
     "network": {
-        "format": "{bandwidthDownBytes}, {bandwidthUpBytes}",
+        "tooltip-format": "{bandwidthDownBytes}, {bandwidthUpBytes}",
+        "format-wifi": "{essid} {icon}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
         "interval": 2,
-        "min-length": 25,
-        "max-length": 25,
+        "min-length": 10,
+        "max-length": 10
     },
     "battery": {
         "format": "{capacity}% {icon}",
-        "format-icons": ["", "", "", "", ""],
-        "min-length": 10,
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "min-length": 8,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format-charging": "{capacity}% "
     },
     "clock": {
         "format": "{:%Y-%m-%d %I:%M %p}",
-        "min-length": 25,
-        "max-length": 25,
+        "min-length": 20,
+        "max-length": 20
+    },
+    "pulseaudio": {
+        "format": "{volume}% ",
+        "min-length": 7
     }
 }

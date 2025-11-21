@@ -1,17 +1,54 @@
 window#waybar {
-    background-color: #151020;
-    font-family: "Intone Mono Nerd Font";
+    background-color: rgba(0, 0, 0, 0);
+    font-family: "Intone Mono Nerd Font Propo";
+    font-weight: bold;
 }
 
 #window {
-    padding-left: 1em;
+    padding-left: 1.5em;
+    color: #787c99;
 }
 
-#memory, #cpu, #battery {
-    background-color: #6A0DAD;
-    color: #08050F;
+#workspaces button {
+    color: #787c99;
 }
-#network, #clock {
-    background-color: #08050F;
-    color: #6A0DAD;
+
+#workspaces button.focused {
+    color: #000;
+    background-color: #bb9af7;
+    margin-top: .2em;
+    margin-bottom: .2em;
+}
+
+#memory,
+#cpu,
+#battery,
+#network,
+#clock,
+#pulseaudio {
+    margin-left: 1em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    border-radius: 5px;
+    border-left: 1px solid #787c99;
+    border-right: 1px solid #787c99;
+}
+
+#battery {
+    color: #e0af68;
+}
+
+#memory {
+    color: #d9d4cd;
+    margin-right: 1em;
+}
+
+#cpu,
+#network {
+    color: #bb9af7;
+}
+
+#pulseaudio,
+#clock {
+    color: #9ece6a;
 }

@@ -1,5 +1,6 @@
 {
-    "editor.fontFamily": "'Intone Mono Nerd Font', monospace",
+    "editor.fontFamily": "'IntoneMono Nerd Font Propo', monospace",
+    "terminal.integrated.fontFamily": "'Intone Mono Nerd Font Propo', monospace",
     "editor.fontSize": 14,
     "editor.fontLigatures": true,
     "editor.formatOnSave": true,

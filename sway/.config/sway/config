@@ -28,7 +28,7 @@ smart_gaps on
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Pictures/background.jpg fill
+output * bg ~/Pictures/arch.png fill
 #
 # Example configuration:
 #
