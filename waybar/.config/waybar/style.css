@@ -25,7 +25,8 @@ window#waybar {
 #battery,
 #network,
 #clock,
-#pulseaudio {
+#pulseaudio,
+#custom-gpuinfo {
     margin-left: 1em;
     margin-top: .5em;
     margin-bottom: .5em;
@@ -34,13 +35,13 @@ window#waybar {
     border-right: 1px solid #787c99;
 }
 
-#battery {
-    color: #e0af68;
+#custom-gpuinfo {
+    margin-right: 1em;
 }
 
+#pulseaudio,
 #memory {
-    color: #d9d4cd;
-    margin-right: 1em;
+    color: #e0af68;
 }
 
 #cpu,
@@ -48,7 +49,8 @@ window#waybar {
     color: #bb9af7;
 }
 
-#pulseaudio,
-#clock {
+#clock,
+#battery,
+#custom-gpuinfo {
     color: #9ece6a;
 }

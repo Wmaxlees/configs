@@ -12,7 +12,8 @@
         "pulseaudio",
         "battery",
         "cpu",
-        "memory"
+        "memory",
+        "custom/gpuinfo"
     ],
     "sway/window": {
         "max-length": 50
@@ -63,5 +64,12 @@
     "pulseaudio": {
         "format": "{volume}% ",
         "min-length": 7
+    },
+    "custom/gpuinfo": {
+        "format": "\uea60 {}",
+        "exec": "~/.config/waybar/scripts/gpuinfo.sh",
+        "return-type": "json",
+        "interval": 2,
+        "min-length": 6
     }
 }
