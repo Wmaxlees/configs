@@ -19,12 +19,10 @@
         "max-length": 50
     },
     "memory": {
-        "format": "{percentage}% ",
-        "min-length": 7
+        "format": "{percentage}% "
     },
     "cpu": {
-        "format": "{usage}% ",
-        "min-length": 6
+        "format": "{usage}% "
     },
     "network": {
         "tooltip-format": "{bandwidthDownBytes}, {bandwidthUpBytes}",
@@ -37,8 +35,6 @@
             ""
         ],
         "interval": 2,
-        "min-length": 10,
-        "max-length": 10
     },
     "battery": {
         "format": "{capacity}% {icon}",
@@ -62,14 +58,12 @@
         "max-length": 20
     },
     "pulseaudio": {
-        "format": "{volume}% ",
-        "min-length": 7
+        "format": "{volume}% "
     },
     "custom/gpuinfo": {
-        "format": "\uea60 {}",
+        "format": "{} ",
         "exec": "~/.config/waybar/scripts/gpuinfo.sh",
         "return-type": "json",
-        "interval": 2,
-        "min-length": 6
+        "interval": 2
     }
 }

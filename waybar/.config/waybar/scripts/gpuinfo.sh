@@ -1,7 +1,8 @@
 #!/bin/bash
+stats=$(nvidia-smi --query-gpu=utilization.gpu,memory.used,memory.total --format=csv,noheader,nounits)
+UTIL=$(echo "$stats" | awk -F', ' '{print $1}')
+MEM_USED=$(echo "$stats" | awk -F', ' '{print $2}')
+MEM_TOTAL=$(echo "$stats" | awk -F', ' '{print $3}')
+MEM_PERC=$(awk "BEGIN {printf \"%.0f\", ($MEM_USED / $MEM_TOTAL) * 100}")
 
-# Get GPU utilization from nvidia-smi
-GPU_UTIL=$(nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits | tr -d '\n')
-
-# Output in Waybar's JSON format
-echo "{\"text\": \"${GPU_UTIL}%\", \"tooltip\": \"GPU Utilization: ${GPU_UTIL}%\"}"
+echo "{\"text\": \"${UTIL}% | ${MEM_PERC}%\", \"tooltip\": \"GPU Load: ${UTIL}%\nVRAM: ${MEM_USED}MiB / ${MEM_TOTAL}MiB\"}"

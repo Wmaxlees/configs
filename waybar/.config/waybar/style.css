@@ -33,6 +33,8 @@ window#waybar {
     border-radius: 5px;
     border-left: 1px solid #787c99;
     border-right: 1px solid #787c99;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 #custom-gpuinfo {
