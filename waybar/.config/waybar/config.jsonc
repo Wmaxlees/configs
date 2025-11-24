@@ -9,11 +9,12 @@
     ],
     "modules-right": [
         "network",
-        "pulseaudio",
-        "battery",
         "cpu",
         "memory",
-        "custom/gpuinfo"
+        "temperature",
+        "custom/gpuinfo",
+        "pulseaudio",
+        "battery"
     ],
     "sway/window": {
         "max-length": 50
@@ -28,13 +29,13 @@
         "tooltip-format": "{bandwidthDownBytes}, {bandwidthUpBytes}",
         "format-wifi": "{essid} {icon}",
         "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            "󰤯",
+            "󰤟",
+            "󰤢",
+            "󰤥",
+            "󰤨"
         ],
-        "interval": 2,
+        "interval": 2
     },
     "battery": {
         "format": "{capacity}% {icon}",
@@ -61,9 +62,14 @@
         "format": "{volume}% "
     },
     "custom/gpuinfo": {
-        "format": "{} ",
+        "format": "{}",
         "exec": "~/.config/waybar/scripts/gpuinfo.sh",
         "return-type": "json",
         "interval": 2
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C ",
+        "format-critical": "{temperatureC}°C "
     }
 }
