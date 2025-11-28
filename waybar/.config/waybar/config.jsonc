@@ -14,7 +14,9 @@
         "temperature",
         "custom/gpuinfo",
         "pulseaudio",
-        "battery"
+        "battery",
+        "custom/lock",
+        "custom/power"
     ],
     "sway/window": {
         "max-length": 50
@@ -71,5 +73,15 @@
         "critical-threshold": 80,
         "format": "{temperatureC}°C ",
         "format-critical": "{temperatureC}°C "
+    },
+    "custom/lock": {
+        "format": "",
+        "tooltip": "Lock",
+        "on-click": "swaylock -f"
+    },
+    "custom/power": {
+        "format": "",
+        "tooltip": "Power Menu",
+        "on-click": "systemctl poweroff"
     }
 }

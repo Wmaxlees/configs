@@ -26,7 +26,9 @@ window#waybar {
 #clock,
 #pulseaudio,
 #custom-gpuinfo,
-#temperature {
+#temperature,
+#custom-lock,
+#custom-power {
     margin-top: .5em;
     margin-bottom: .5em;
     padding-left: 1em;
@@ -44,7 +46,7 @@ window#waybar {
     padding-right: 1em;
 }
 
-#battery {
+#custom-power {
     margin-right: 1em;
 }
 
@@ -63,4 +65,12 @@ window#waybar {
 #clock,
 #custom-gpuinfo {
     color: #9ece6a;
+}
+
+#custom-lock {
+    color: #e0af68;
+}
+
+#custom-power {
+    color: #f7768e;
 }
